@@ -34,6 +34,7 @@ services:
       - traefik.http.routers.one-api.rule=Host(`rakuapi.vcorp.ai`)
       - traefik.http.routers.one-api.entrypoints=web
       - traefik.http.services.one-api-svc.loadbalancer.server.port=3000
+      - traefik.http.routers.one-api.service=one-api-svc
 
   redis:
     image: "${REGISTRY:-docker.io}/redis:latest"
