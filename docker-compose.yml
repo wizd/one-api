@@ -6,8 +6,8 @@ services:
     container_name: one-api
     restart: always
     command: --log-dir /app/logs
-    expose:
-      - 3000
+    ports:
+      - 3501:3000
     volumes:
       - ../files/data/oneapi:/data
       - ../files/logs:/app/logs
@@ -33,7 +33,7 @@ services:
       - traefik.enable=true
       - traefik.http.routers.one-api.rule=Host(`rakuapi.vcorp.ai`)
       - traefik.http.routers.one-api.entrypoints=web
-      - traefik.http.services.one-api.loadbalancer.server.port=3000
+      - traefik.http.services.one-api-svc.loadbalancer.server.port=3000
 
   redis:
     image: "${REGISTRY:-docker.io}/redis:latest"
