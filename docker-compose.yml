@@ -4,7 +4,7 @@ services:
   one-api:
     # image: "${REGISTRY:-docker.io}/justsong/one-api:latest"
     build:
-      context: ./path/to/your/one-api  # 请替换为您的 one-api 源代码目录路径
+      context: .  # 请替换为您的 one-api 源代码目录路径
       dockerfile: Dockerfile  # 如果您的 Dockerfile 名称不是默认的,请相应修改
     container_name: one-api
     restart: always
