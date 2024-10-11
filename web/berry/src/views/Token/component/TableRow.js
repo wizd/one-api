@@ -28,7 +28,7 @@ const COPY_OPTIONS = [
   {
     key: 'next',
     text: 'ChatGPT Next',
-    url: 'https://app.nextchat.dev/#/?settings={"key":"sk-{key}","url":"{serverAddress}"}',
+    url: 'https://rakuchat.vcorp.ai/#/?settings={"key":"sk-{key}","url":"https://rakuapi.vcorp.ai"}',
     encode: false
   },
   { key: 'ama', text: 'BotGem', url: 'ama://set-api-key?server={serverAddress}&key=sk-{key}', encode: true },

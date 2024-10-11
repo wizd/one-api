@@ -102,7 +102,7 @@ const TokensTable = () => {
     if (nextLink) {
       nextUrl = nextLink + `/#/?settings={"key":"sk-${key}","url":"${serverAddress}"}`;
     } else {
-      nextUrl = `https://app.nextchat.dev/#/?settings={"key":"sk-${key}","url":"${serverAddress}"}`;
+      nextUrl = `https://rakuchat.vcorp.ai/#/?settings={"key":"sk-${key}","url":"https://rakuapi.vcorp.ai"}`;
     }
 
     let url;
@@ -147,7 +147,7 @@ const TokensTable = () => {
     if (chatLink) {
       defaultUrl = chatLink + `/#/?settings={"key":"sk-${key}","url":"${serverAddress}"}`;
     } else {
-      defaultUrl = `https://app.nextchat.dev/#/?settings={"key":"sk-${key}","url":"${serverAddress}"}`;
+      defaultUrl = `https://rakuchat.vcorp.ai/#/?settings={"key":"sk-${key}","url":"https://rakuapi.vcorp.ai"}`;
     }
     let url;
     switch (type) {

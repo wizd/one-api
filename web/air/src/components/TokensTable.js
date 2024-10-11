@@ -331,7 +331,7 @@ const TokensTable = () => {
     if (nextLink) {
       nextUrl = nextLink + `/#/?settings={"key":"sk-${key}","url":"${serverAddress}"}`;
     } else {
-      nextUrl = `https://app.nextchat.dev/#/?settings={"key":"sk-${key}","url":"${serverAddress}"}`;
+      nextUrl = `https://rakuchat.vcorp.ai/#/?settings={"key":"sk-${key}","url":"https://rakuapi.vcorp.ai"}`;
     }
 
     let url;
