@@ -6,8 +6,8 @@ services:
     container_name: one-api
     restart: always
     command: --log-dir /app/logs
-    ports:
-      - "3501:3000"
+    expose:
+      - 3000
     volumes:
       - ../files/data/oneapi:/data
       - ../files/logs:/app/logs
@@ -33,7 +33,7 @@ services:
       - traefik.enable=true
       - traefik.http.routers.one-api.rule=Host(`rakuapi.vcorp.ai`)
       - traefik.http.routers.one-api.entrypoints=web
-      - traefik.http.services.one-api.loadbalancer.server.port=3501
+      - traefik.http.services.one-api.loadbalancer.server.port=3000
 
   redis:
     image: "${REGISTRY:-docker.io}/redis:latest"
@@ -48,8 +48,6 @@ services:
     container_name: mysql
     volumes:
       - ../files/data/mysql:/var/lib/mysql  # 挂载目录，持久化存储
-    ports:
-      - '3306:3306'
     environment:
       TZ: Asia/Shanghai   # 设置时区
       MYSQL_ROOT_PASSWORD: 'OneAPI@justsong' # 设置 root 用户的密码
