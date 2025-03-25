@@ -9,6 +9,8 @@ services:
     container_name: one-api
     restart: always
     command: --log-dir /app/logs
+    expose:
+      - 3501
     ports:
       - 3501:3000
     volumes:
